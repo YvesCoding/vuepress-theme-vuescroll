@@ -1,0 +1,17 @@
+{
+  "name": "vuepress-theme-vuescroll",
+  "version": "0.0.2",
+  "description": "Allow you to customize scrollbars in Vuepress",
+  "main": "./VuescrollWrapper/index.js",
+  "keywords": [
+    "vue",
+    "vuepress",
+    "vuescroll"
+  ],
+  "author": "Yves Wang",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^0.14.2",
+    "vuescroll": "^4.8.4"
+  }
+}
