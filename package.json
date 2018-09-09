@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-vuescroll",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Allow you to customize scrollbars in Vuepress",
   "main": "./VuescrollWrapper/index.js",
   "keywords": [
@@ -8,6 +8,10 @@
     "vuepress",
     "vuescroll"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YvesCoding/vuepress-theme-vuepress.git"
+  },
   "author": "Yves Wang",
   "license": "MIT",
   "dependencies": {
