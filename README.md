@@ -55,7 +55,7 @@ export default ({ Vue, router, store }) => {
 
 ## Current Vuepress Version
 
-### 0.13.1
+### 0.14.2
 
 ## License
 
