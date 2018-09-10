@@ -2,7 +2,7 @@
   "name": "vuepress-theme-vuescroll",
   "version": "0.0.7",
   "description": "Allow you to customize scrollbars in Vuepress",
-  "main": "./VuescrollWrapper/index.js",
+  "main": "./transformed/index.js",
   "keywords": [
     "vue",
     "vuepress",
