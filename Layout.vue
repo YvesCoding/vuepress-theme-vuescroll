@@ -1,5 +1,5 @@
 <template>
-    <vue-scroll ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
+    <vue-scroll class="__vs-layout" ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
         <Layout>
         </Layout>
     </vue-scroll>
