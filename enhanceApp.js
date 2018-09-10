@@ -1,6 +1,6 @@
 import vuescroll from 'vuescroll';
-import vuescrollMix from './VuescrollWrapper/vuescroll-mix';
-import store from './VuescrollWrapper/store';
+import vuescrollMix from './transformed/vuescroll-mix';
+import store from './transformed/store';
 
 export default ({ Vue, router }) => {
   Vue.use(vuescroll);
