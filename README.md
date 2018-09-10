@@ -46,8 +46,8 @@ export default ({ Vue, router, store }) => {
       scrollingX: false
     }
   };
-
-  registry({ Vue, router, store }, ops);
+  // Tell vuescroll your option.
+  registry(ops);
 };
 ```
 

@@ -1,18 +1,18 @@
 <template>
-    <vue-scroll ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
-        <slot></slot>
-    </vue-scroll>
+  <vue-scroll ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
+    <slot></slot>
+  </vue-scroll>
 </template>
 
 <script>
 import store from './store';
-import ops from './index';
+import baseOpts from './index';
 import Vue from 'vue';
 
 export default {
   data() {
     return {
-      ops,
+      ops: baseOpts.ops,
       windowSize: {}
     };
   },
