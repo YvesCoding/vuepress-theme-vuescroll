@@ -8,14 +8,14 @@
 <script>
 import Vue from 'vue';
 import store from './transformed/store';
-import ops from './transformed/index';
+import baseOpts from './transformed/index';
 import Layout from './.vuepress/theme/Layout';
 
 export default {
   components: { Layout },
   data() {
     return {
-      ops,
+      ops: baseOpts.ops,
       windowSize: {}
     };
   },
