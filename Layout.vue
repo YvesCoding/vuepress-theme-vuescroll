@@ -1,8 +1,8 @@
 <template>
-    <vue-scroll class="__vs-layout" ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
+    <component :is="current" class="__vs-layout" ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
         <Layout>
         </Layout>
-    </vue-scroll>
+    </component>
 </template>
 
 <script>
@@ -18,6 +18,24 @@ export default {
       ops: baseOpts.ops,
       windowSize: {}
     };
+  },
+  computed: {
+    current() {
+      let currentComp;
+      switch (baseOpts.mode) {
+        case 'slide':
+          currentComp = 'vs-slide';
+          break;
+        case 'native':
+          currentComp = 'vs-native';
+          break;
+        default:
+          currentComp = 'vue-scroll';
+          break;
+      }
+
+      return currentComp;
+    }
   },
   mounted() {
     window.addEventListener('resize', this.setContainerSize);
