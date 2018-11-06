@@ -1,15 +1,16 @@
 {
   "name": "vuepress-theme-vuescroll",
-  "version": "0.0.6",
+  "version": "0.0.13",
   "description": "Allow you to customize scrollbars in Vuepress",
-  "main": "./VuescrollWrapper/index.js",
+  "main": "./transformed/index.js",
   "keywords": [
     "vue",
     "vuepress",
     "vuescroll"
   ],
   "scripts": {
-    "build": "babel src --out-dir VuescrollWrapper"
+    "build": "babel src --out-dir transformed",
+    "eject": "vuepress eject"
   },
   "repository": {
     "type": "git",

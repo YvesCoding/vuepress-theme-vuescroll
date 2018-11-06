@@ -14,6 +14,7 @@ let baseOptions = {
 
 export default baseOptions;
 
-export function registry(ops = baseOptions.ops) {
+export function registry(ops = baseOptions.ops, mode) {
   baseOptions.ops = ops;
+  baseOptions.mode = mode;
 }

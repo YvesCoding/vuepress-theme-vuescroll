@@ -34,7 +34,7 @@ module.exports = {
 import { registry } from 'vuepress-theme-vuescroll';
 
 export default ({ Vue, router, store }) => {
-  // Your vuescroll options of most outside element.
+  // Your  options of most outside vuescroll.
   let ops = {
     bar: {
       background: '#3eaf7c'
@@ -46,8 +46,12 @@ export default ({ Vue, router, store }) => {
       scrollingX: false
     }
   };
+  // THe version you would like to use.
+  // default: vuescroll(mix)
+  // options: slide, native
+  const mode = 'native';
   // Tell vuescroll your option.
-  registry(ops);
+  registry(ops, mode);
 };
 ```
 
@@ -55,7 +59,7 @@ export default ({ Vue, router, store }) => {
 
 ## Current Vuepress Version
 
-### 0.13.1
+### 0.14.2
 
 ## License
 

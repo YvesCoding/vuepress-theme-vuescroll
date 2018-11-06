@@ -1,9 +1,17 @@
 import vuescroll from 'vuescroll';
-import vuescrollMix from './VuescrollWrapper/vuescroll-mix';
-import store from './VuescrollWrapper/store';
+import vsNative from 'vuescroll/dist/vuescroll-native';
+import vsSilde from 'vuescroll/dist/vuescroll-slide';
+import vuescrollMix from './transformed/vuescroll-mix';
+import store from './transformed/store';
 
 export default ({ Vue, router }) => {
   Vue.use(vuescroll);
+  Vue.use(vsNative, {
+    name: 'vs-native'
+  });
+  Vue.use(vsSilde, {
+    name: 'vs-slide'
+  });
   Vue.mixin(vuescrollMix);
 
   router.afterEach((to, from) => {
