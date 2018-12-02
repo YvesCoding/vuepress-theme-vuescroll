@@ -3,9 +3,6 @@ let baseOptions = {
     bar: {
       background: '#3eaf7c'
     },
-    rail: {
-      gutterOfEnds: '60px'
-    },
     scrollPanel: {
       scrollingX: false
     }
