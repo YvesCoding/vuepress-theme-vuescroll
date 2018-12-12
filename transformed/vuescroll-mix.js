@@ -11,6 +11,11 @@ var _lodash = _interopRequireDefault(require("lodash.throttle"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function isIos() {
+  var u = navigator.userAgent;
+  return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+}
+
 var _default = {
   methods: {
     handleVueScroll: (0, _lodash.default)(function (scrollTop) {
@@ -18,6 +23,8 @@ var _default = {
     }, 300),
     _setActiveHash: function _setActiveHash(scrollTop) {
       var _this = this;
+
+      if (isIos()) return;
 
       if (_store.default.specifyAuthor) {
         _store.default.disableScrollBehavior = true;

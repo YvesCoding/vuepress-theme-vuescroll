@@ -1,12 +1,19 @@
 import store from './store';
 import throttle from 'lodash.throttle';
 
+function isIos() {
+  let u = navigator.userAgent;
+  return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+}
+
 export default {
   methods: {
     handleVueScroll: throttle(function(scrollTop) {
       this._setActiveHash(scrollTop);
     }, 300),
     _setActiveHash(scrollTop) {
+      if (isIos()) return;
+
       if (store.specifyAuthor) {
         store.disableScrollBehavior = true;
         this.$router.replace(
