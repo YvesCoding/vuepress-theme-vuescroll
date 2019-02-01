@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-vuescroll",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "Allow you to customize scrollbars in Vuepress",
   "main": "./transformed/index.js",
   "keywords": [
@@ -21,7 +21,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.0.0",
     "vuepress": "^0.14.2",
-    "vuescroll": "4.10.0"
+    "vuescroll": "4.10.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
