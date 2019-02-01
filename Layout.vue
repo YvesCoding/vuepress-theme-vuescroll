@@ -88,7 +88,7 @@ export default {
 
 <style>
 .__vs-layout > .__rail-is-vertical {
-  z-index: 999;
+  z-index: 999 !important;
 }
 .__vs-layout > .__rail-is-vertical .__bar-is-vertical::before {
   content: '';
