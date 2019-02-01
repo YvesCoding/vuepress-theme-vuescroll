@@ -1,8 +1,16 @@
 <template>
-    <component :is="current" class="__vs-layout" ref="vs" :ops="ops" :style="windowSize" @handle-scroll-complete="hSC" @handle-scroll="handleScroll">
-        <Layout>
-        </Layout>
-    </component>
+  <component
+    :is="current"
+    class="__vs-layout"
+    ref="vs"
+    :ops="ops"
+    :style="windowSize"
+    @handle-scroll-complete="hSC"
+    @handle-scroll="handleScroll"
+  >
+    <Layout>
+    </Layout>
+  </component>
 </template>
 
 <script>
@@ -79,7 +87,6 @@ export default {
 </script>
 
 <style>
-@import '~vuescroll/dist/vuescroll.css';
 .__vs-layout > .__rail-is-vertical {
   z-index: 999;
 }
