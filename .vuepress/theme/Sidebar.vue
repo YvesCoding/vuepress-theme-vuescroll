@@ -31,6 +31,9 @@ export default {
       sideBarOps: {
         bar: {
           background: 'hsla(0,0%,47%,.4)'
+        },
+        vuescroll: {
+          wheelScrollDuration: 500
         }
       }
     };
