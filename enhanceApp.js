@@ -15,9 +15,9 @@ export default ({ Vue, router }) => {
   Vue.mixin(vuescrollMix);
 
   router.afterEach((to, from) => {
-    setTimeout(() => {
-      if (!Vue.prototype.$isServer) {
-        if (window.vs && !store.disableScrollBehavior) {
+    if (!Vue.prototype.$isServer) {
+      if (window.vs && !store.disableScrollBehavior) {
+        setTimeout(() => {
           let y;
           if (!to.hash) {
             y = 0;
@@ -28,8 +28,8 @@ export default ({ Vue, router }) => {
             y
           });
           store.specifyAuthor = to.hash;
-        }
+        }, 100);
       }
-    }, 0);
+    }
   });
 };
