@@ -19,14 +19,14 @@
         <div class="pic-container">
           <div class="per-box">
             <img
-              src="https://github.com/wangyi7099/pictureCdn/blob/master/allPic/vuescroll/wechatpay.png?raw=true"
+              src="./wechatpay.png"
               alt=""
               srcset=""
             >
           </div>
           <div class="per-box">
             <img
-              src="https://github.com/wangyi7099/pictureCdn/blob/master/allPic/vuescroll/alipay.jpg?raw=true"
+              src="./alipay.jpg"
               alt=""
               srcset=""
             >
