@@ -14,7 +14,7 @@
         v-show="active"
       >
         <div class="qr-header">
-          感谢您的捐赠
+          支持一下Vuescroll！
         </div>
         <div class="pic-container">
           <div class="per-box">
@@ -92,14 +92,15 @@ export default {
 }
 
 .qr-header {
-  line-height: 30px;
-  height: 10%;
+  line-height: 60px;
+  height: 20%;
   font-size: 16px;
   color: #333333;
   text-align: center;
 }
 
 .qrcode-box {
+  overflow: hidden;
   position: absolute;
   width: 550px;
   height: 300px;
@@ -109,16 +110,18 @@ export default {
   top: -25%;
   left: 100%;
   transform: translate(-100%, -100%);
-  transition: opacity 0.3s;
+  transition: transform 0.3s;
+  transform-origin: bottom right;
+  transform: translate(-100%, -100%) scale(1);
 
   .pic-container {
     display: flex;
-    height: 90%;
+    height: 80%;
   }
 
   .per-box {
     flex: 1;
-    padding: 5px 30px;
+    padding: 0 30px 5px;
 
     img {
       width: 100%;
@@ -128,10 +131,10 @@ export default {
 }
 
 .qrcode-box-enter {
-  opacity: 0;
+  transform: translate(-100%, -100%) scale(0);
 }
 
 .qrcode-box-leave-to {
-  opacity: 0;
+  transform: translate(-100%, -100%) scale(0);
 }
 </style>
