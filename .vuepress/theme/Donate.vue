@@ -1,35 +1,19 @@
 <template>
-  <div
-    class="donate-box"
-    :class="{active}"
-    v-show="shouldShowDonate"
-  >
-    <div @click="active = !active">
-      捐赠
-
+  <div class="donate-box" :class="{ active }" v-show="shouldShowDonate">
+    <div @click="active = !active" style="padding:0 5px">
+      捐赠支持作者！
     </div>
     <transition name="qrcode-box">
-      <div
-        class="qrcode-box"
-        v-show="active"
-      >
+      <div class="qrcode-box" v-show="active">
         <div class="qr-header">
-          支持一下Vuescroll！
+          扫码支持一下Vuescroll！
         </div>
         <div class="pic-container">
           <div class="per-box">
-            <img
-              src="./wechatpay.png"
-              alt=""
-              srcset=""
-            >
+            <img src="./wechatpay.png" alt="" srcset="" />
           </div>
           <div class="per-box">
-            <img
-              src="./alipay.jpg"
-              alt=""
-              srcset=""
-            >
+            <img src="./alipay.jpg" alt="" srcset="" />
           </div>
         </div>
       </div>
@@ -53,7 +37,7 @@ export default {
   methods: {
     setDonate() {
       this.shouldShowDonate =
-        typeof window !== 'undefined' &&
+        typeof window !== "undefined" &&
         /zh/.test(location.pathname) &&
         !/demo/.test(location.pathname);
     }
@@ -72,8 +56,7 @@ export default {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 44px;
-  height: 44px;
+   height: 44px;
   color: #46bd87;
   background-color: #fff;
   z-index: 9999;
