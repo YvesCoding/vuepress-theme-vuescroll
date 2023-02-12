@@ -27,15 +27,7 @@
       height="30px"
     ></iframe>
 
-    <div
-      style="
-        position: absolute;
-        top: 13px;
-        left: 270px;
-        color: green;
-        border: yellow 1px solid;
-      "
-    >
+    <div class="part-time-job">
       作者在寻找一份兼职，有意的请加微信：wy_3565759
     </div>
 
@@ -112,6 +104,14 @@ function css(el, property) {
 
 $navbar-vertical-padding = 0.7rem;
 $navbar-horizontal-padding = 1.5rem;
+
+.part-time-job {
+  position: absolute;
+  top: 13px;
+  left: 270px;
+  color: green;
+  border: yellow 1px solid;
+}
 
 .navbar {
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
