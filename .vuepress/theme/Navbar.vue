@@ -3,15 +3,48 @@
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <router-link :to="$localePath" class="home-link">
-      <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
-      <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">{{ $siteTitle }}</span>
+      <img
+        class="logo"
+        v-if="$site.themeConfig.logo"
+        :src="$withBase($site.themeConfig.logo)"
+        :alt="$siteTitle"
+      />
+      <span
+        ref="siteName"
+        class="site-name"
+        v-if="$siteTitle"
+        :class="{ 'can-hide': $site.themeConfig.logo }"
+        >{{ $siteTitle }}</span
+      >
     </router-link>
 
-    <iframe style="position: absolute; bottom: 6px; left: 146px;" src="https://ghbtns.com/github-btn.html?user=yvescoding&repo=vuescroll&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+    <iframe
+      style="position: absolute; bottom: 6px; left: 146px"
+      src="https://ghbtns.com/github-btn.html?user=yvescoding&repo=vuescroll&type=star&count=true"
+      frameborder="0"
+      scrolling="0"
+      width="160px"
+      height="30px"
+    ></iframe>
 
-    <div class="links" :style="{
-        'max-width': linksWrapMaxWidth + 'px'
-      }">
+    <div
+      style="
+        position: absolute;
+        top: 13px;
+        left: 270px;
+        color: green;
+        border: yellow 1px solid;
+      "
+    >
+      作者在寻找一份兼职，有意的请加微信：wy_3565759
+    </div>
+
+    <div
+      class="links"
+      :style="{
+        'max-width': linksWrapMaxWidth + 'px',
+      }"
+    >
       <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
       <SearchBox v-else-if="$site.themeConfig.search !== false" />
       <NavLinks class="can-hide" />
@@ -20,25 +53,25 @@
 </template>
 
 <script>
-import SidebarButton from './SidebarButton.vue';
-import AlgoliaSearchBox from '@AlgoliaSearchBox';
-import SearchBox from './SearchBox.vue';
-import NavLinks from './NavLinks.vue';
+import SidebarButton from "./SidebarButton.vue";
+import AlgoliaSearchBox from "@AlgoliaSearchBox";
+import SearchBox from "./SearchBox.vue";
+import NavLinks from "./NavLinks.vue";
 
 export default {
   components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
 
   data() {
     return {
-      linksWrapMaxWidth: null
+      linksWrapMaxWidth: null,
     };
   },
 
   mounted() {
     const MOBILE_DESKTOP_BREAKPOINT = 719; // refer to config.styl
     const NAVBAR_VERTICAL_PADDING =
-      parseInt(css(this.$el, 'paddingLeft')) +
-      parseInt(css(this.$el, 'paddingRight'));
+      parseInt(css(this.$el, "paddingLeft")) +
+      parseInt(css(this.$el, "paddingRight"));
     const handleLinksWrapWidth = () => {
       if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
         this.linksWrapMaxWidth = null;
@@ -50,7 +83,7 @@ export default {
       }
     };
     handleLinksWrapWidth();
-    window.addEventListener('resize', handleLinksWrapWidth, false);
+    window.addEventListener("resize", handleLinksWrapWidth, false);
   },
 
   computed: {
@@ -62,8 +95,8 @@ export default {
 
     isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName;
-    }
-  }
+    },
+  },
 };
 
 function css(el, property) {

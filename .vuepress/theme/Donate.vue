@@ -1,13 +1,16 @@
 <template>
   <div class="donate-box" :class="{ active }" v-show="shouldShowDonate">
-    <div @click="active = !active" style="padding:0 5px">捐赠支持作者！</div>
+    <div @click="active = !active" style="padding: 0 5px">捐赠支持作者！</div>
     <transition name="qrcode-box">
       <div class="qrcode-box" v-show="active">
         <h2 class="qr-header">
           <div class="header-innter">
             项目的发展离不开你的支持，请作者喝杯咖啡吧 ☕！感谢！
             <div style="margin-top: 10px">
-              <a href="https://github.com/wangyi7099/donate/blob/master/History.md" target="_blank">
+              <a
+                href="https://github.com/wangyi7099/donate/blob/master/History.md"
+                target="_blank"
+              >
                 捐赠列表
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,12 +54,12 @@ export default {
   watch: {
     $route() {
       this.setDonate();
-    }
+    },
   },
   data() {
     return {
       active: false,
-      shouldShowDonate: false
+      shouldShowDonate: false,
     };
   },
   methods: {
@@ -65,14 +68,14 @@ export default {
         typeof window !== "undefined" &&
         /zh/.test(location.pathname) &&
         !/demo/.test(location.pathname);
-    }
+    },
   },
   mounted() {
     this.setDonate();
   },
   updated() {
     this.setDonate();
-  }
+  },
 };
 </script>
 
